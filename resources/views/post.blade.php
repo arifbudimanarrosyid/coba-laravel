@@ -3,7 +3,7 @@
 @section('container')
     <article class="mb-5">
         <article class="mb-5">
-            <h2>{{ $post['title'] }}</h2>
+            <h4>{{ $post['title'] }}</h4>
             <h5>by {{ $post['author'] }}</h5>
             <p>{{ $post['body'] }}</p>
         </article>
