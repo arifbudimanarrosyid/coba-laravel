@@ -4,7 +4,9 @@
     <article class="mb-5">
         <article class="mb-5">
             <h4>{{ $post->title }}</h4>
-            {{-- <h5>by {{ $post['author'] }}</h5> --}}
+            <p>by Arif Budiman Arrosyid in
+                <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
+            </p>
             {!! $post->body !!}
         </article>
     </article>
@@ -16,9 +18,10 @@
 
 {{-- Post::create(
 [
-'title' => 'judul ke satu',
-'slug' => 'judul-ke-satu',
-'excerpt' => 'excerpt ke lima',
+'title' => 'judul ke dua',
+'category_id' => 2,
+'slug' => 'judul-ke-dua',
+'excerpt' => 'excerpt ke dua',
 'body' => '<p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa neque, enim a esse nesciunt sit asperiores non quasi
     minus dolor sint consequuntur qui et amet, sed, fugit corrupti maxime officiis! Laboriosam, odit, dolore suscipit
