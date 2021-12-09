@@ -15,6 +15,8 @@
 
 <body class="bg-dark text-light">
     @include('partials.navbar')
+    <br>
+    <br>
     <div class="container mt-4">
         @yield('container')
     </div>

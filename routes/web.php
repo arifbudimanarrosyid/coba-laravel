@@ -22,6 +22,7 @@ Route::get('/', function () {
         'home',
         [
             'title' => 'Home',
+            'active' => 'home',
         ]
     );
 });
@@ -29,7 +30,8 @@ Route::get('/about', function () {
     return view(
         'about',
         [
-            'title' => 'About', 'name' => 'Arif Budiman', 'email' => 'arifbudimanarrosyid@gmail.com'
+            'title' => 'About', 'name' => 'Arif Budiman', 'email' => 'arifbudimanarrosyid@gmail.com',
+            'active' => 'about'
         ]
     );
 });
@@ -41,6 +43,7 @@ Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 Route::get('/categories', function (Category $category) {
     return view('categories', [
         'title' => 'Post Categories',
+        'active' => 'categories',
         'categories' => Category::all()
     ]);
 });
@@ -49,6 +52,7 @@ Route::get('/categories', function (Category $category) {
 Route::get('/categories/{category:slug}', function (Category $category) {
     return view('posts', [
         'title' => "Post by Category: $category->name",
+        'active' => 'categories',
         'posts' => $category->posts->load('category', 'author'),
     ]);
 });

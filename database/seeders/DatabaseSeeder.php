@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Personal',
             'slug' => 'personal',
         ]);
-        Post::factory(1000)->create();
+        Post::factory(20)->create();
 
     }
 }
