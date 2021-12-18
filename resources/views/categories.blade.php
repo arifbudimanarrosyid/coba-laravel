@@ -11,7 +11,7 @@
                             alt="{{ $category->name }}">
                         <div class="card-img-overlay d-flex align-items-center p-0">
                             <h5 class="card-title text-center flex-fill p-4" style="background-color: rgba(0,0,0,0.5)">
-                                <a href="/categories/{{ $category->slug }}" class="text-decoration-none text-light">{{ $category->name }}</a>
+                                <a href="/blog?category{{ $category->slug }}" class="text-decoration-none text-light">{{ $category->name }}</a>
                             </h5>
                         </div>
                     </div>
