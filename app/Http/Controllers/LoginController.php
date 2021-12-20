@@ -12,4 +12,5 @@ class LoginController extends Controller
             'active' => 'login',
         ]);
     }
+
 }
